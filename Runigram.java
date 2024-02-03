@@ -70,6 +70,7 @@ public class Runigram {
 		for (int i = 0; i < image.length; i++) {
 			System.err.println();
 			for (int j = 0; j < image[i].length; j++) {
+				// #feedback - you could use the above print function - "print(image[i][j])".
 				System.out.print("(");
 				System.out.printf("%3s,", image[i][j].getRed());   // Prints the red component
 				System.out.printf("%3s,", image[i][j].getGreen()); // Prints the green component
@@ -87,7 +88,7 @@ public class Runigram {
     	int numCols = image[0].length;
 
 		for (int i = 0; i < numRows; i++) {
-			System.err.println();
+			System.err.println(); // #feedback - this is not needed.
 			for (int j = 0; j < numCols / 2; j++) {
 				int j1 = numCols - 1 - j; 
 
@@ -107,6 +108,7 @@ public class Runigram {
 		int numRows = image.length;
    		int numCols = image[0].length;
 
+		// #feedback - the indentation should be fixed.
     for (int i = 0; i < numRows / 2; i++) {
         for (int j = 0; j < numCols; j++) {
             int i1 = numRows - 1 - i;
@@ -143,6 +145,7 @@ public class Runigram {
 		for (int i = 0; i < image.length; i++) {
 			System.err.println();
 			for (int j = 0; j < image[i].length; j++) {
+				// #feedback - note that you change the contents of the given image in place. In these cases, it is usually better to create a new image and avoid changing the given one.
 				image[i][j] = luminance(image[i][j]);
 
 			}
